@@ -2,4 +2,4 @@
 
 PATH="$PATH:/usr/games"
 
-cowsay "$(fortune ./gfortunes)"
+cowsay "$(fortune gfortunes)"
