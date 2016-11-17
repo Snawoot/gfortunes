@@ -1,0 +1,19 @@
+#!/usr/bin/python
+
+import sys
+
+def main():
+    try:
+        line = next(sys.stdin).strip() + '\n'
+        sys.stdout.write(line)
+    except StopIteration:
+        return
+
+    for line in sys.stdin:
+        line = line.strip() + '\n'
+        if line:
+            sys.stdout.write('%\n')
+            sys.stdout.write(line)
+
+if __name__ == '__main__':
+    main()
