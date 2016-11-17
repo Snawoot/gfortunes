@@ -4,5 +4,5 @@ python:
   - "2.6"
   - "2.7"
 # command to install dependencies
-install: "sudo apt-get update ; sudo apt-get install -y fortune cowsay; make"
-script: "[ -f gfortunes -a -f gfortunes.dat ] && ./tellfortune.sh"
+install: "sudo apt-get update ; sudo apt-get install -y fortune cowsay"
+script: "make && [ -f gfortunes -a -f gfortunes.dat ] && ./tellfortune.sh"
