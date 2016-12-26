@@ -1,11 +1,10 @@
 service tellfortune
 {
-	disable 	= yes # delete this line after setup
 	type		= UNLISTED
 	port		= 5051
 	socket_type	= stream
 	protocol	= tcp
 	user		= nobody
 	wait		= no
-	server		= /usr/local/games/tellfortune.sh
+	server		= /usr/local/gfortunes/tellfortune.sh
 }
