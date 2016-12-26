@@ -1,0 +1,11 @@
+#!/bin/bash
+
+IFS=$'\n'
+i=0
+while read line ; do
+    i=$[i+1]
+    if [[ $[ ( $RANDOM * 32768 + $RANDOM ) % i ] -eq 0 ]] ; then
+        chosen="$line"
+    fi
+done
+echo "$chosen"

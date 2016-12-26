@@ -11,5 +11,5 @@ python:
   - "3.6-dev" # 3.6 development branch
   - "nightly" # currently points to 3.7-dev
 # command to install dependencies
-install: "sudo apt-get update ; sudo apt-get install -y fortune"
-script: "make && [ -f gfortunes -a -f gfortunes.dat ] && ./tellfortune.sh"
+install: sudo apt-get update ; sudo apt-get install -y fortune
+script: make && [ -f gfortunes -a -f gfortunes.dat ] && PATH="$PATH:/usr/games" fortune gfortunes && ./tellfortune.sh

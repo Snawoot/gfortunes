@@ -1,5 +1,5 @@
 #!/bin/sh
 
-PATH="$PATH:/usr/games"
+APPROOT="$(dirname "$0")"
 
-"$(dirname "$0")"/bundled/cowsay "$(fortune gfortunes)"
+"$APPROOT"/bundled/cowsay "$("$APPROOT"/util/sampleline < "$APPROOT"/gfortunes.txt)"
