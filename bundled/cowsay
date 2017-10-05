@@ -76,8 +76,13 @@ def cowsay(text):
 
 if __name__ == '__main__':
     if (sys.version_info > (3, 0)):
-        phrase = " ".join(sys.argv[1:])
+        import os
+        import locale
+        encoding = locale.getpreferredencoding()
+        argv = [arg.encode(encoding, 'surrogateescape').decode('utf-8') for arg in sys.argv[1:]]
+        phrase = " ".join(argv)
+        print(phrase)
     else:
-        coding = sys.getfilesystemencoding()
+        coding = "utf-8"
         phrase = " ".join(arg.decode(coding) for arg in sys.argv[1:])
     print(cowsay(phrase))
